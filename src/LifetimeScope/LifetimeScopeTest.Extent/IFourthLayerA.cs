@@ -1,9 +1,11 @@
 namespace Xyz.TForce.Playground.AutofacLifetimeScope.Extent
 {
 
-  public interface IFourthLayer : IBaseContract
+  public interface IFourthLayerA : IBaseContract
   {
 
     IThirdLayer ThirdLayer { get; }
+
+    IThirdLayerA ThirdLayerA { get; }
   }
 }

@@ -3,15 +3,21 @@ using System.Collections.Generic;
 namespace Xyz.TForce.Playground.AutofacLifetimeScope.Extent.Services
 {
 
-  public class FourthLayer : BaseService, IFourthLayer
+  public class FourthLayerB : BaseService, IFourthLayerB
   {
 
-    public FourthLayer(IThirdLayer thirdLayer)
+    public FourthLayerB(IThirdLayer thirdLayer, IThirdLayerA thirdLayerA, IThirdLayerB thirdLayerB)
     {
       ThirdLayer = thirdLayer;
+      ThirdLayerA = thirdLayerA;
+      ThirdLayerB = thirdLayerB;
     }
 
     public IThirdLayer ThirdLayer { get; }
+
+    public IThirdLayerA ThirdLayerA { get; }
+
+    public IThirdLayerB ThirdLayerB { get; }
 
     public List<string> AllInstanceNames
     {
@@ -19,6 +25,8 @@ namespace Xyz.TForce.Playground.AutofacLifetimeScope.Extent.Services
       {
         List<string> results = new List<string>();
         results.AddRange(ThirdLayer.AllInstanceNames);
+        results.AddRange(ThirdLayerA.AllInstanceNames);
+        results.AddRange(ThirdLayerB.AllInstanceNames);
         results.Add(InstanceName);
         return results;
       }

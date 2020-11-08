@@ -3,22 +3,22 @@ using System.Collections.Generic;
 namespace Xyz.TForce.Playground.AutofacLifetimeScope.Extent.Services
 {
 
-  public class ThirdLayer : BaseService, IThirdLayer
+  public class SecondLayerA : BaseService, ISecondLayerA
   {
 
-    public ThirdLayer(ISecondLayer secondLayer)
+    public SecondLayerA(IFirstLayer firstLayer)
     {
-      SecondLayer = secondLayer;
+      FirstLayer = firstLayer;
     }
 
-    public ISecondLayer SecondLayer { get; }
+    public IFirstLayer FirstLayer { get; }
 
     public List<string> AllInstanceNames
     {
       get
       {
         List<string> results = new List<string>();
-        results.AddRange(SecondLayer.AllInstanceNames);
+        results.AddRange(FirstLayer.AllInstanceNames);
         results.Add(InstanceName);
         return results;
       }

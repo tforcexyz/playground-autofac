@@ -1,7 +1,7 @@
 namespace Xyz.TForce.Playground.AutofacLifetimeScope.Extent
 {
 
-  public interface ISecondLayer : IBaseContract
+  public interface ISecondLayerA : IBaseContract
   {
 
     IFirstLayer FirstLayer { get; }
