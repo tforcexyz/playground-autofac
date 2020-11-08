@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.2</TargetFrameworks>
+    <RootNamespace>Xyz.TForce.Playground.AutofacLifetimeScope</RootNamespace>
+    <Authors>T-Force Xyz</Authors>
+    <Company>T-Force Xyz</Company>
+    <Copyright>T-Force Xyz</Copyright>
+    <Product>TFX Playground: Autofac</Product>
+    <Description>TFX Playground: Autofac</Description>
+    <PackageLicenseUrl>https://github.com/tforcexyz/playground-autofac/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageReleaseNotes>https://github.com/tforcexyz/playground-autofac/blob/master/RELEASE</PackageReleaseNotes>
+    <PackageIconUrl>https://github.com/tforcexyz/playground-autofac/blob/master/package_icon.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/tforcexyz/playground-autofac/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/tforcexyz/playground-autofac/</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <SignAssembly>false</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <Version>1.0.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.4" />
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LifetimeScopeTest.Extent\LifetimeScopeTest.Extent.csproj" />
+  </ItemGroup>
+
+</Project>
